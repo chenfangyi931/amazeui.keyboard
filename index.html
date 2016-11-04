@@ -1,0 +1,177 @@
+<!doctype html>
+<html class="no-js">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>自适应虚拟键盘</title>
+
+		<link rel="stylesheet" href="css/amazeui.min.css">
+		<link rel="stylesheet" href="css/amazeui.keyboard.min.css">
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<div class="am-g ">
+			<div class="am-u-sm-11 am-u-sm-centered am-margin-top-lg">
+				<article class="am-article">
+					<div class="am-article-hd">
+						<h1 class="am-article-title am-text-xxxl">自适应虚拟键盘1.0使用说明</h1>
+					</div>
+					<div class="am-article-bd">
+						<p >
+							插件是基于Amaze UI开发的一款响应式键盘
+						</p>
+						<p class="am-article-meta am-text-default" style="line-height: 50px;">
+							<span class="am-margin-left-sm">作者:窝瓜（广西柳州）</span>
+							<img src="img/QQ图片20161009023724.jpg" style="float: left;width: 70px;height: 50px;" /></p>
+					</div>
+				</article>
+				<p class="am-text-xxl">插件功能:</p>
+				<section class="am-panel am-panel-default">
+					<header class="am-panel-hd">
+						<h3 class="am-panel-title">英文键盘</h3>
+					</header>
+					<div class="am-panel-bd">
+						<input style="width: 100%;" class="English1" placeholder='正常英文键盘' />
+						<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+						<input style="width: 100%;" class="English2" placeholder='混淆英文键盘' />
+						<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+						<input style="width: 100%;" class="English3" placeholder='符号扩展英文键盘' />
+						<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+						<p>英文键盘除了正常键盘还支持混淆式键盘、符号扩展键盘供在不同环境下使用。</p>
+					</div>
+				</section>
+				<section class="am-panel am-panel-default">
+					<header class="am-panel-hd">
+						<h3 class="am-panel-title">数字键盘</h3>
+					</header>
+					<div class="am-panel-bd">
+						<input style="width: 300px;" class="Number1" placeholder='正常数字键盘' />
+						<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+						<input style="width: 300px;" class="Number2" placeholder='混淆数字键盘' />
+						<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+						<input style="width: 300px;" class="Number3" placeholder='符号扩展数字键盘' />
+						<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+						<p>数字键盘也同样是除了正常键盘还支持混淆式键盘、符号扩展键盘供在不同环境下使用。</p>
+					</div>
+				</section>
+				<section class="am-panel am-panel-default">
+					<header class="am-panel-hd">
+						<h3 class="am-panel-title">中文键盘</h3>
+					</header>
+					<div class="am-panel-bd">
+						<input style="width: 300px;" class="Chinese" placeholder='中文键盘' />
+						<hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+						<p>重头戏来了!!中文键盘,目前1.0版本仅支持首字母查找中文,2.0版本将更新全拼查找</p>
+						<p>中文键盘不同上面两个,没有混淆,自带扩展</p>
+						<p>目前收录中文2000+具体多少我也忘了</p>
+					</div>
+				</section>
+				<p class="am-text-xxl">1、引用js css文件</p>
+				<pre>&lt;link rel="stylesheet" href="amazeui.min.css"&gt;// amazeui  css文件
+&lt;link rel="stylesheet" href="amazeui.keyboard.min.css"&gt;// keyboard  css文件
+&lt;script type="text/javascript" src="jquery.min.js"&gt;// jquery 文件
+&lt;script type="text/javascript" src="amazeui.min.js"&gt;// amazeui js 文件
+&lt;script type="text/javascript" src="amazeui.keyboard.min.js"&gt;// keyboard  js 文件
+				</pre>
+
+				<p class="am-text-xxl">2、设置class类或ID</p>
+				<p class="am-text-lg">
+					&lt;input class="keyboard" /&gt;
+					<br /> &lt;textarea id="keyboard" &gt;&lt;/textarea&gt;
+				</p>
+				<p class="am-text-xxl">3、创建好键盘容器<span class="am-text-xl">(警告!必须要创建 否则无法生成键盘,也阔以根据需要添加对应的容器,不需要的可以不添加;)</span></p>
+				<p class="am-text-lg">
+					&lt;div class="am-keyboard am-keyboard-English"&gt;&lt;/div&gt;<span class="am-text-danger">英文键盘</span>
+					<br /> &lt;div class="am-keyboard am-keyboard-number"&gt;&lt;/div&gt;<span class="am-text-danger">数字键盘</span>
+					<br /> &lt;div class="am-keyboard am-keyboard-Chinese"&gt;&lt;/div&gt;<span class="am-text-danger">中文键盘</span>
+				</p>
+				<p class="am-text-xxl">4 、最后一步,绑定事件</p>
+				<pre class="am-pre-scrollable">
+$('.keyboard').keyboard({ type: 'English' });
+$('#keyboard').keyboard({ type: 'English' });
+</pre>
+				<p class="am-text-xxl">键盘功能API</p>
+				<p class="am-text-xl">
+					type: English、Number、Chinese(英文、数字、中文)
+				</p>
+				<p class="am-text-xl">
+					upset: true、false(开启混淆,中文键盘是没有这个功能的)
+				</p>
+				<p class="am-text-xl">
+					extend: true、false(开启符号扩展,中文键盘是自带这个功能不能关闭)
+				</p>
+				<p class="am-text-xl">
+					$().keyboard_End();(关闭键盘,考虑到需要做点击键盘以外的地方关闭键盘)
+					<br />
+					<button class="guanbi am-text-lg">关闭键盘</button>
+				</p>
+			</div>
+		</div>
+		<div class="am-keyboard am-keyboard-number">
+
+		</div>
+		<div class="am-keyboard am-keyboard-English">
+		</div>
+
+		<div class="am-keyboard am-keyboard-Chinese">
+
+		</div>
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="js/jquery.min.js "></script>
+		<!--<![endif]-->
+		<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js "></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js "></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js "></script>
+<![endif]-->
+		<script src="js/amazeui.min.js"></script>
+		<script src="js/amazeui.keyboard.min.js"></script>
+		<script>
+			$('.English1').keyboard({
+				type: 'English', //English/Number/Chinese
+				upset: false,
+				extend: false
+			});
+			$('.English2').keyboard({
+				type: 'English', //English/Number/Chinese
+				upset: true,
+				extend: false
+			});
+			$('.English3').keyboard({
+				type: 'English', //English/Number/Chinese
+				upset: false,
+				extend: true
+			});
+			$('.Number1').keyboard({
+				type: 'Number', //English/Number/Chinese
+				upset: false,
+				extend: false
+			});
+			$('.Number2').keyboard({
+				type: 'Number', //English/Number/Chinese
+				upset: true,
+				extend: false
+			});
+			$('.Number3').keyboard({
+				type: 'Number', //English/Number/Chinese
+				upset: false,
+				extend: true
+			});
+
+			$('.Chinese').keyboard({
+				type: 'Chinese', //English/Number/Chinese
+			});
+			$('.guanbi').click(function() {
+				$().keyboard_End();
+			});
+		</script>
+	</body>
+
+</html>
