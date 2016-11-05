@@ -1,11 +1,11 @@
 # amazeui.keyboard
 ###自适应虚拟键盘1.0插件是基于Amaze UI开发的一款响应式键盘
 ## 1、	引用js css文件
-###<link rel="stylesheet" href="amazeui.min.css">// amazeui  css文件
-###<link rel="stylesheet" href="amazeui.keyboard.min.css">// keyboard  css文件
-###<script type="text/javascript" src="jquery.min.js">// jquery 文件
-###<script type="text/javascript" src="amazeui.min.js">// amazeui js 文件
-###<script type="text/javascript" src="amazeui.keyboard.min.js">// keyboard  js 文件
+###<link rel="stylesheet" href="amazeui.min.css">
+###<link rel="stylesheet" href="amazeui.keyboard.min.css">
+###<script type="text/javascript" src="jquery.min.js">
+###<script type="text/javascript" src="amazeui.min.js">
+###<script type="text/javascript" src="amazeui.keyboard.min.js">
 ##2、	设置class类或ID
 ###<input class="keyboard" /> 
 ###<textarea id="keyboard" ></textarea>
